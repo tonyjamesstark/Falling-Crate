@@ -1,0 +1,126 @@
+Location:
+  Arena:
+    World: Events
+    X1: -1157.0
+    Y1: 175.0
+    Z1: -721.0
+    X2: -857.0
+    Y2: 175.0
+    Z2: -1073.0
+Setting:
+  # Armor true = will not give reward if any armor is equipped by player
+  Armor: false
+  KnowlegeBook: true
+Crates:
+  Diamond:
+    ChestLocation:
+      X: -985
+      Y: 135
+      Z: -818
+      World: Events
+    Announce:
+      AnnounceDrop: false
+      String: Diamond has dropped
+    Blocks:
+    - DIAMOND_BLOCK
+  Emerald:
+    ChestLocation:
+      X: -987
+      Y: 135
+      Z: -818
+      World: Events
+    Announce:
+      AnnounceDrop: false
+      String: Emerald has dropped
+    Blocks:
+    - EMERALD_BLOCK
+  Iron:
+    ChestLocation:
+      X: -983
+      Y: 135
+      Z: -818
+      World: Events
+    Announce:
+      AnnounceDrop: true
+      String: '&bA &odisguised &7&lIron Block &bhas dropped'
+      Grab:
+        AnnounceGrab: true
+        String: '&b&l%player% &7won an Iron Block prize!'
+    Blocks:
+    - DIAMOND_BLOCK
+    - EMERALD_BLOCK
+  Purpur:
+    ChestLocation:
+      X: -980
+      Y: 135
+      Z: -812
+      World: Events
+    Announce:
+      AnnounceDrop: false
+      String: Purpur has dropped
+    Blocks:
+    - PURPUR_BLOCK
+  Gold:
+    ChestLocation:
+      X: -980
+      Y: 135
+      Z: -810
+      World: Events
+    Announce:
+      AnnounceDrop: true
+      String: Gold has dropped
+    Blocks:
+    - GOLD_BLOCK
+  Beacon:
+    ChestLocation:
+      X: -980
+      Y: 135
+      Z: -808
+      World: Events
+    Announce:
+      AnnounceDrop: true
+      String: '&bBeacon has dropped'
+    Blocks:
+    - BEACON
+  AnonLess:
+    ChestLocation:
+      X: -983
+      Y: 135
+      Z: -802
+      World: Events
+    Announce:
+      AnnounceDrop: false
+      String: '&bBeacon has dropped'
+    Blocks:
+    - SEA_LANTERN
+    - GLOWSTONE
+    - SHROOMLIGHT
+    - JACK_O_LANTERN
+  AnonMid:
+    ChestLocation:
+      X: -985
+      Y: 135
+      Z: -802
+      World: Events
+    Announce:
+      AnnounceDrop: false
+      String: '&bBeacon has dropped'
+    Blocks:
+    - SEA_LANTERN
+    - GLOWSTONE
+    - SHROOMLIGHT
+    - JACK_O_LANTERN
+  AnonHigh:
+    ChestLocation:
+      X: -987
+      Y: 135
+      Z: -802
+      World: Events
+    Announce:
+      AnnounceDrop: true
+      String: '&bThe good one has dropped'
+    Blocks:
+    - SEA_LANTERN
+    - GLOWSTONE
+    - SHROOMLIGHT
+    - JACK_O_LANTERN
