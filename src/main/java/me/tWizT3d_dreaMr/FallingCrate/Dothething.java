@@ -40,6 +40,8 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.metadata.Metadatable;
 
+import me.tWizT3d_dreaMr.tWizT3dLib.Lib.colors;
+
 public class Dothething
 		implements Listener {
 	static World world;
@@ -213,12 +215,12 @@ public class Dothething
 			}
 
 			String msg = main.config.getString("Crates." + type + ".Announce.Grab.String");
-			msg.replace("%player%", p.getName());
-			msg.replace("%item%", reward);
+			msg = msg.replace("%player%", p.getName());
+			msg = msg.replace("%item%", reward);
 
 			for (Player pp : Bukkit.getServer().getOnlinePlayers()) {
 				if (main.isWithinRadius(pp)) {
-					pp.sendMessage(msg);
+					pp.sendMessage(colors.formatnp(msg));
 				}
 			}
 			log(msg);
@@ -404,32 +406,6 @@ public class Dothething
 		if (name == null) {
 			Bukkit.getLogger().log(Level.SEVERE, "Error with name block material: " + b.getType());
 			return;
-		}
-		if (main.config.contains("Crates." + name + ".Announce.Grab.AnnounceGrab")
-				&& main.config.getBoolean("Crates." + name + ".Announce.Grab.AnnounceGrab")) {
-			String msg = "";
-			colors.formatnp(main.config.getString("Crates." + name + ".Announce.Grab.String"));
-			msg = msg.replace("%player%", p.getName());
-			try {
-				msg = msg.replace("%name%", name);
-				msg = colors.formatnp(main.config.getString("Crates." + name + ".Announce.Grab.String"));
-				msg = colors.formatnp(msg);
-				msg = msg.replace("%player%", p.getName());
-				msg = msg.replace("%name%", name);
-				msg = colors.formatnp(msg);
-			} catch (NoClassDefFoundError error) {
-				Bukkit.getLogger().log(Level.SEVERE, "NoClassDefFoundError, ignoring");
-				msg = main.config.getString("Crates." + name + ".Announce.Grab.String");
-				msg = msg.replace("%player%", p.getName());
-				msg = msg.replace("%name%", name);
-			}
-
-			for (Player pla : Bukkit.getServer().getOnlinePlayers()) {
-
-				if (main.isWithinRadius(pla)) {
-					pla.sendMessage(msg);
-				}
-			}
 		}
 
 		e.getClickedBlock().setType(Material.AIR);

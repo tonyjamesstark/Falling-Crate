@@ -23,4 +23,5 @@ permissions:
   tCrate.create:
     default: op
     description: Allows the player to make a falling crate.
+depends: [tWizT3dLib]
 api-version: 1.21.4
